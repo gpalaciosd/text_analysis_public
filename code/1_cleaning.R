@@ -103,7 +103,7 @@ news_dtm_SA <- removeSparseTerms(news_dtm_SA, 0.97)
 dictionary <- read_excel("../data/dictionary.xlsx")
 
 # Data as tidy
-news_tidy <- tidy(news_dtm_SA) ## Documento, palabra, cuantas veces ## xx puedo ahora agregar a nivel de mes?
+news_tidy <- tidy(news_dtm_SA)
 head(news_tidy)
 
 # Words frequently used 
