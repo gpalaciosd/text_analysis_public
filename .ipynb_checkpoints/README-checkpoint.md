@@ -5,11 +5,11 @@ In this project, I use text analysis tools to crete news-based indicators of eco
 
 ## Outcome variables
 
-I predict monthly rates of economic growth for GDP and its components (value added approach). Outputs include GDP, GDP of non-primary sectors, Manufacturing, and Services. The period of analysis is November 2012 - September 2020. 
+I predict monthly rates of economic growth for GDP and its components (value added approach). Outputs include GDP, GDP of non-primary sectors, manufacturing, and services. The period of analysis is November 2012 - September 2020. 
 
 ## Contribution
 
-The monthly rate of GDP growth is published with a lag of a month and a half -- for instance, we get the April GDP growth rate by mid June, and the May rate by mid July. In this project, we use real-time indicators to do nowcasting. For example, we collect news up to the last day of May and, in consequence, are able to have predictions of the growth rates of April and May by May 31.
+The monthly rate of GDP growth is published with a lag of a month and a half -- for instance, we get the April GDP growth rate by mid June, and the May rate by mid July. In this project, we use real-time indicators to do nowcasting. For example, by collecting news up to the last day of May, we are able to forecast the growth rates of April and May by May 31.
 
 ## Scripts
 

@@ -5,17 +5,17 @@ In this project, I use text analysis tools to crete news-based indicators of eco
 
 ## Outcome variables
 
-I predict monthly rates of economic growth for GDP and its components (value added approach). Outputs include GDP, GDP of non-primary sectors, Manufacturing, and Services. The period of analysis is November 2012 - September 2020. 
+I predict monthly rates of economic growth for GDP and its components (value added approach). Outputs include GDP, GDP of non-primary sectors, manufacturing, and services. The period of analysis is November 2012 - September 2020. 
 
 ## Contribution
 
-The monthly rate of GDP growth is published with a lag of a month and a half -- for instance, we get the April GDP growth rate by mid June, and the May rate by mid July. In this project, we use real-time indicators to do nowcasting. For example, we collect news up to the last day of May and, in consequence, are able to have predictions of the growth rates of April and May by May 31.
+The monthly rate of GDP growth is published with a lag of a month and a half -- for instance, we get the April GDP growth rate by mid June, and the May rate by mid July. In this project, we use real-time indicators to do nowcasting. For example, by collecting news up to the last day of May, we are able to forecast the growth rates of April and May by May 31.
 
 ## Scripts
 
 The script __1_cleaning__ transforms the body of news articles into a bag of words. I create monthly variables using sentiment analysis and topic modeling. For information about topic modeling, please refer to [this website](https://www.tidytextmining.com/topicmodeling.html) on text mining in R.
 
-The script __2_forecast__ runs Lasso models to forecast monthly growth in economic activity based on news variables and other economic indicators, such as electricity and firms expectations. To evaluate the performance of the model, I obtain rolling window forecasts and calculate two main metrics:
+The script __2_forecast__ runs Lasso models to forecast monthly growth in economic activity based on news variables and other economic indicators, such as electricity and firms expectations. To evaluate the performance of the model, I obtain rolling window forecasts and compute two main metrics:
 1. RMSE: The square root of the mean square error obtained from comparing the actual growth rate with the rolling window (RW) prediction.
 2. Match: The proportion of times that the model predicts the right direction of change in economic growth. For example, if the growth rate in May is higher than in April, the prediction for May should be higher than the RW prediction that the model would have given for April based on all the information available up until April 30.
 
