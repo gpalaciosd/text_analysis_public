@@ -21,7 +21,7 @@ library(stringr)
 library(stringi)
 library(SnowballC)
 
-load('../../text_analysis/data/news_data.Rdata')
+load('../../text_analysis/data/news_data.Rda')
 news_data <- news_data %>%
   mutate(document=row_number()) 
 head(news_data)
